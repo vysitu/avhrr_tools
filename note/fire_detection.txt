@@ -1,0 +1,20 @@
+Giglio et al 2016 MODIS v6 Fire
+3.1. Masks Land and water pixels
+3.2. Cloud masking
+3.3. Detect fire
+3.4. Background characterization - Giglio et al 2003
+3.5. Tentative fire detection
+3.6. Rejection tests (prevent false alarm)
+3.6.1 Sun glint rejection
+    Already contained in QA band
+3.6.2 Desert boundary rejection 
+    refer to Giglio et al 2003
+3.6.3 Land-pixel coastal rejection
+    Uses 860nm and 2100nm bands. Refer to Giglio et al 2003 Section 2.2.8
+3.6.4 Forest clearing rejection
+    1100nm, 860nm and 4000nm are used
+3.6.5 Water-pixel coastal rejection
+    
+3.7 Fire detection confidence
+
+3.8 Retrieve FRP

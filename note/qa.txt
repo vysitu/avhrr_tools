@@ -1,0 +1,48 @@
+Bit 0: Unused
+0: No
+1: Yes
+Bit 1: Pixel is cloudy
+0: No
+1: Yes
+Bit 2: Pixel contains cloud shadow
+0: No
+1: Yes
+Bit 3: Pixel is over water
+0: No
+1: Yes
+Bit 4: Pixel is over sunglint
+0: No
+1: Yes
+Bit 5: Pixel is over dense dark vegetation
+0: No
+1: Yes
+Bit 6: Pixel is at night (high solar zenith)
+0: No
+1: Yes
+Bit 7: Channels 1-5 are valid
+0: No
+1: Yes
+Bit 8: Channel 1 value is invalid
+0: No
+1: Yes
+Bit 9: Channel 2 value is invalid
+0: No
+1: Yes
+Bit 10: Channel 3 value is invalid
+0: No
+1: Yes
+Bit 11: Channel 4 value is invalid
+0: No
+1: Yes
+Bit 12: Channel 5 value is invalid
+0: No
+1: Yes
+Bit 13: RHO3 value is invalid
+0: No
+1: Yes
+Bit 14: BRDF correction is invalid
+0: No
+1: Yes
+Bit 15: Polar flag, latitude over 60 degrees (land) or 50 degrees (ocean)
+0: No
+1: Yes

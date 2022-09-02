@@ -19,6 +19,25 @@ qa_dict = {
     15: "Polar flag, latitude over 60 degrees (land) or 50 degrees (ocean)",
     }
 
+bit_dict = {
+    'unused':0,
+    'cloud':1,
+    'cloud_shadow':2,
+    'water':3,
+    'sunglint':4,
+    'dark_vegetation':5,
+    'night':6,
+    'ch1-5_valid':7,
+    'ch1_invalid':8,
+    'ch2_invalid':9,
+    'ch3_invalid':10,
+    'ch4_invalid':11,
+    'ch5_invalid':12,
+    'rho3_invalid':13,
+    'brdf_invalid':14,
+    'polar':15
+    }
+
 
 def binary_padding(input1, width = 0):
     """
@@ -63,3 +82,22 @@ def bitmask_unpack(qa_arr, width=16):
         bit_arr = np.right_shift(qa_arr, shift) % 2
         mask_arr[shift, :, :] = bit_arr
     return(mask_arr)
+
+def bit2mask(qa_band, bit_list, output = 'valid'):
+    """
+    qa_band: a numpy array
+    bit_list, a list of bits to mask
+        e.g. [1,2] means create cloud and cloud shadow mask
+    
+    return: mask array, default: 0 means masked, 1 means not masked (valid)
+        e.g. cloudy pixels have bit_1=1, then in the output the corresponding pixel is 0
+    """
+    cond = np.zeros_like(qa_band)
+    for bit in bit_list:
+        t_cond = np.right_shift(qa_band, bit) % 2
+        cond += t_cond
+    if output == 'valid':
+        mask = np.where(cond > 0, 0, 1)
+    elif output == 'mask':
+        mask = np.where(cond > 0, 1, 0)
+    return mask

@@ -1,0 +1,42 @@
+    title: Fire_cci Gridded LTDR Burned Area product
+    institution: University of Alcala
+    source: LTDR AVH09 Surface Reflectance Product (Version 5), ESA CCI Land Cover dataset v2.0.7 and Copernicus Climate Change Service (C3S) Global La
+nd Cover dataset v2.1.1
+    history: Created on 2020-11-11 16:44:06
+    references: See https://climate.esa.int/en/projects/fire/
+    tracking_id: 783b88c2-2dd7-49ef-9c37-badd70c050d4
+    Conventions: CF-1.6
+    product_version: 1.1
+    summary: The grid product is the result of summing up burned area within each cell of 0.25 degrees in a regular grid covering the whole Earth in mo
+nthly composites. The attributes stored are sum of burned area, standard error, fraction of burnable area and fraction of observed area.
+    keywords: Burned Area, Fire Disturbance, Climate Change, ESA, GCOS
+    id: 19820101-ESACCI-L4_FIRE-BA-AVHRR-LTDR-fv1.1.nc
+    naming_authority: int.esa.climate
+    doi: 10.5285/62866635ab074e07b93f17fbf87a2c1a
+    keywords_vocabulary: burned area, fire
+    cdm_data_type: Grid
+    comment: These data were produced as part of the ESA Fire_cci project.
+    date_created: 20201111T164406Z
+    creator_name: University of Alcala
+    creator_url: https://climate.esa.int/en/projects/fire/
+    creator_email: emilio.chuvieco@uah.es
+    project: Climate Change Initiative - European Space Agency
+    geospatial_lat_min: -90
+    geospatial_lat_max: 90
+    geospatial_lon_min: -180
+    geospatial_lon_max: 180
+    geospatial_vertical_min: 0
+    geospatial_vertical_max: 0
+    time_coverage_start: 19820101T000000Z
+    time_coverage_end: 19820131T235959Z
+    time_coverage_duration: P1M
+    time_coverage_resolution: P1M
+    standard_name_vocabulary: NetCDF Climate and Forecast (CF) Metadata Convention
+    license: ESA CCI Data Policy: free and open access
+    platform: NOAA-7, NOAA-9, NOAA-11, NOAA-14, NOAA-16, NOAA-18 and NOAA-19
+    sensor: AVHRR
+    spatial_resolution: 0.25 degrees
+    geospatial_lon_units: degrees_east
+    geospatial_lat_units: degrees_north
+    geospatial_lon_resolution: 0.25
+    geospatial_lat_resolution: 0.25

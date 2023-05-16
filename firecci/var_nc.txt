@@ -1,0 +1,45 @@
+V==========V
+VAR:lat
+units:degree_north
+standard_name:latitude
+long_name:latitude
+bounds:lat_bnds
+V==========V
+VAR:lat_bnds
+V==========V
+VAR:lon
+units:degree_east
+standard_name:longitude
+long_name:longitude
+bounds:lon_bnds
+V==========V
+VAR:lon_bnds
+V==========V
+VAR:time
+units:days since 1970-01-01 00:00:00
+standard_name:time
+long_name:time
+bounds:time_bnds
+calendar:standard
+V==========V
+VAR:time_bnds
+V==========V
+VAR:burned_area
+units:m2
+standard_name:burned_area
+long_name:total burned_area
+cell_methods:time: sum
+V==========V
+VAR:standard_error
+units:m2
+long_name:standard error of the estimation of burned area
+V==========V
+VAR:fraction_of_burnable_area
+units:1
+long_name:fraction of burnable area
+comment:The fraction of burnable area is the fraction of the cell that corresponds to vegetated land covers that could burn. The land cover classes are those from CCI Land Cover (https://climate.esa.int/en/projects/land-cover/), and their extension to the C3S Land cover (https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-land-cover?tab=overview)
+V==========V
+VAR:fraction_of_observed_area
+units:1
+long_name:fraction of observed area
+comment:The fraction of observed area is the fraction of the total burnable area in the cell (fraction_of_burnable_area variable of this file) that was observed during the time interval, and was not marked as unsuitable/not observable. The latter refers to the area where it was not possible to obtain observational burned area information for the whole time interval because of lack of input data (non-existing images for that location and period), cloud cover or sensor failure.
